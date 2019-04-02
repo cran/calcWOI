@@ -1,0 +1,6 @@
+exportPattern("^[[:alpha:]]+")
+useDynLib(calcWOI, .registration = TRUE)
+import ("wavethresh", except = "imwd")
+importFrom("LS2W", "imwd")
+importFrom("LS2W", "getdata")
+importFrom("utils", "data")
