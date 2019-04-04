@@ -68,7 +68,7 @@ function(x = x, s = c(1,3), l = c(4,7), thres = 0.1, flat = 25, verbose = FALSE,
     
     ## finished
     if (verbose) print(paste("Finished WOI and LWOI. End:", date()))
-    l <- list(WOI1orig = WOI [1], WOI2orig = WOI [2], WOI3orig = WOI [3], WOIorig = log (WOI [1] * WOI [2] * WOI [3]), WOI1 = WOI [4], WOI2 = WOI [5], WOI3 = WOI [6], WOI = 1/3 * (WOI [4] + WOI [5] * WOI [6]), LWOI1 = LWOI [, , 1], LWOI2 = LWOI [, , 2], LWOI3 = LWOI [, , 3], LWOI = 1/3 * (LWOI [, , 1] + LWOI [, , 2] + LWOI [, , 3]), s = s, l = l, flat = flat, quad = quad, thres = thres, RR = RR, ts = round(difftime(Sys.time(), as.POSIXct(tstart), units = "secs"), 3))
+    l <- list(WOI1orig = WOI [1], WOI2orig = WOI [2], WOI3orig = WOI [3], WOIorig = log (WOI [1] * WOI [2] * WOI [3]), WOI1 = WOI [4], WOI2 = WOI [5], WOI3 = WOI [6], WOI = 1/3 * (WOI [4] + WOI [5] + WOI [6]), LWOI1 = LWOI [, , 1], LWOI2 = LWOI [, , 2], LWOI3 = LWOI [, , 3], LWOI = 1/3 * (LWOI [, , 1] + LWOI [, , 2] + LWOI [, , 3]), s = s, l = l, flat = flat, quad = quad, thres = thres, RR = RR, ts = round(difftime(Sys.time(), as.POSIXct(tstart), units = "secs"), 3))
     if (verbose) print(paste("WOI calculation took", l$ts, "seconds."))
     return(l)
 }
